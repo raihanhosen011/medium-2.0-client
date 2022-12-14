@@ -18,7 +18,7 @@ export default function RootLayout({
         <title> Home : Next 13 blog </title>
       </head>
 
-      <body className='text-base text-white bg-slate-900' >
+      <body>
         {children}
       </body>
     </html>
