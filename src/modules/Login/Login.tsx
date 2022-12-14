@@ -1,25 +1,17 @@
 import React from 'react'
 //
 import Form from './partials/Form'
-import Image from './partials/Image'
-
 
 const Login = () => {
   return (
-    <div>
-       <div>
+    <div className='flex flex-col items-center justify-center min-h-screen' >
         
-            {/* --- left side : form ---  */}
-            <div>
-                <Form />
-            </div>
-
-            {/* --- right side : image --- */}
-            <div>
-                <Image />
-            </div>       
-
-       </div> 
+        <h1 className='font-playfair' > Join Medium .3 </h1>
+   
+        <div >
+          <Form />
+        </div>
+ 
     </div>
   )
 }
