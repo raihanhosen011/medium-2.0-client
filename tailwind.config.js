@@ -7,7 +7,8 @@ module.exports = {
         primary: "#1A8917",
       },
       fontFamily : {
-        "playfair" : ['Playfair Display', 'sans-serif']
+        "playfair" : ['Playfair Display', 'sans-serif'],
+        "primary" : ['Poppins', 'sans-serif']
       }
     },
   },

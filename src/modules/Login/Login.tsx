@@ -11,7 +11,7 @@ const Login = () => {
         <div className='mt-[58px]' >
           <Form />
         </div>
- 
+
     </div>
   )
 }

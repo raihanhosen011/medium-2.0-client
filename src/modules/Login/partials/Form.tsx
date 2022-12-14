@@ -14,7 +14,7 @@ const Form = () => {
 
         <Button full > Sign in </Button>
 
-        <p className='text-sm text-center mt-4' > Don't have account? <Link href='/register' className='text-primary ' > Sign up </Link> </p>
+        <p className='text-sm text-center mt-4' > Already have an account? <Link href='/register' className='text-primary ' > Sign in </Link> </p>
 
       </form>
     </div>
