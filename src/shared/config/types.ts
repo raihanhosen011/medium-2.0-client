@@ -16,4 +16,5 @@ export interface ButtonProps {
     targetBlank?: boolean
     onClick?: () => void
     children?: ReactNode
+    full?: boolean
 };

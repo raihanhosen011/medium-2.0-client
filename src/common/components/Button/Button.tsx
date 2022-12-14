@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC } from "react";
 import Link from "next/link";
 //
@@ -9,7 +11,7 @@ import { ButtonProps } from "@config/types";
 const Button: FC<ButtonProps> = ({
   className = "",
   translate = "",
-  sizeClass = "px-[20px] md:px-[27px] py-[13px] md:py-[13px]",
+  sizeClass = "px-[20px] md:px-[27px] py-[12px] md:py-[13px]",
   fontSize = "",
   disabled = false,
   href,
@@ -18,12 +20,14 @@ const Button: FC<ButtonProps> = ({
   type,
   loading,
   secondary,
+  full,
   onClick = () => {},
 }) => {
   const CLASSES = cx(
      "relative text-white h-auto bg-primary inline-flex items-center text-[14px] md:text-[16px] justify-center rounded-full transition-all font-medium hover:bg-primary-dark duration-300 ",
      disabled && '!bg-disable hover:!bg-disable cursor-not-allowed',
      loading && 'cursor-not-allowed !bg-disable hover:!bg-disable',
+     full && "!w-full",
      fontSize,
      sizeClass,
      translate,

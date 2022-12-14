@@ -13,7 +13,7 @@
    .__login {
       @apply w-[340px]
    }
-   .__login input{
+   .__login input[type="text"], .__login input[type="email"]{
       @apply block border border-[#d2d2d2] rounded-full p-[12px_18px] w-full outline-none mb-4
    }
 }
