@@ -33,8 +33,14 @@
         "src/modules/*"
       ],
       "@types/*": [
-        "src/@types/*"
+        "src/shared/@types/*"
       ],
+      "@utils/*": [
+        "src/shared/utils/*"
+      ],
+      "@config/*": [
+        "src/shared/config/*"
+      ]
     },  
     "plugins": [
       {
