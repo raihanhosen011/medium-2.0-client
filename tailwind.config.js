@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary : "violet-600"
+        primary: "#27AE60",
       },
       fontFamily : {
         "playfair" : ['Playfair Display', 'sans-serif']
