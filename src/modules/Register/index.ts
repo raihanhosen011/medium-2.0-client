@@ -1,2 +1,2 @@
-export * from './Login'
-export { default } from './Login'
+export * from './Register'
+export { default } from './Register'

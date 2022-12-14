@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 //
 import Button from '@components/Button'
 
@@ -29,6 +30,8 @@ const Form = () => {
         </div>
 
         <Button full > Sign up </Button>
+
+        <p className='text-sm text-center mt-4' > Don't have account? <Link href='/register' className='text-primary ' > Sign up </Link> </p>
 
       </form>
     </div>
