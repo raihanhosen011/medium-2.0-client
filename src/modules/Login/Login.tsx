@@ -6,9 +6,9 @@ const Login = () => {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen' >
         
-        <h1 className='font-playfair' > Join Medium .3 </h1>
+        <h1 className='font-playfair font-medium text-[28px]' > Join poors Medium. </h1>
    
-        <div >
+        <div className='mt-[58px]' >
           <Form />
         </div>
  
