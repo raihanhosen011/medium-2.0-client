@@ -1,10 +1,10 @@
 // imports
-import { Urbanist } from '@next/font/google';
+import { Poppins } from '@next/font/google';
 //
 import '../shared/styles/globals.css'
 
 // font
-const urbanist = Urbanist({ subsets: ['latin'] })
+const poppins = Poppins({ weight: "400" })
 
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className={urbanist.className} >
+    <html className={poppins.className} >
       <head>
         <title> Home : Next 13 blog </title>
       </head>
