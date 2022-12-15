@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from 'react'
 import Link from 'next/link'
 //
@@ -14,19 +16,22 @@ const Form = () => {
   // handle input value 
   const handleChange = (e: InputChange) => {
     const { value, name } = e.target
-    setLoginData({[name] : value})
+    setLoginData({ ...loginData, [name] : value })
   }
 
   // handle submit all data
-  const handleSubmit = (e: FormSubmit) => {}
+  const handleSubmit = (e: FormSubmit) => {
+    e.preventDefault()
+
+  }
 
 
   return (
     <div className='__login' >
       <form onSubmit={handleSubmit} >
          
-        <input name="email" placeholder='Enter your name' onChange={handleChange} type='email' required />
-        <input name='text' placeholder='Enter password' onChange={handleChange} type='text' required />
+        <input name="account" placeholder='Enter your email' onChange={handleChange} type='email' required />
+        <input name='password' placeholder='Enter password' onChange={handleChange} type='text' required />
 
         <Button full > Sign in </Button>
 
