@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 //
 import { FormSubmit, InputChange } from '@config/types'
+import { usePost } from '@hooks/useFetch'
 import { loginInitial } from '../config/constants'
 import { ILogin } from '../config/types'
 //
@@ -11,7 +12,11 @@ import Button from '@components/Button'
 
 
 const Form = () => {
+  // state
   const [loginData, setLoginData] = useState<ILogin>(loginInitial)
+
+  // hooks
+  const { mutate, data } = usePost('/login', 'login')
 
   // handle input value 
   const handleChange = (e: InputChange) => {
@@ -22,9 +27,10 @@ const Form = () => {
   // handle submit all data
   const handleSubmit = (e: FormSubmit) => {
     e.preventDefault()
-
+    mutate(loginData)
   }
 
+  console.log(data)
 
   return (
     <div className='__login' >
