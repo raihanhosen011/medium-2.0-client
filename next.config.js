@@ -4,6 +4,9 @@ const nextConfig = {
   swcMinify: true,
   experimental:{
     appDir: true
+  },
+  env: {
+    server_url : "http://localhost:5000/api/"
   }
 }
 
