@@ -41,6 +41,9 @@
       "@redux/*": [
         "src/shared/redux/*"
       ],
+      "@hooks/*": [
+        "src/shared/hooks/*"
+      ],
       "@config/*": [
         "src/shared/config/*"
       ]
