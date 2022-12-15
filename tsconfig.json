@@ -38,6 +38,9 @@
       "@utils/*": [
         "src/shared/utils/*"
       ],
+      "@redux/*": [
+        "src/shared/redux/*"
+      ],
       "@config/*": [
         "src/shared/config/*"
       ]

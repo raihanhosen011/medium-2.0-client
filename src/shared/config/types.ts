@@ -1,3 +1,4 @@
+import { ChangeEvent, FormEvent } from "react";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
 
@@ -18,3 +19,8 @@ export interface ButtonProps {
     children?: ReactNode
     full?: boolean
 };
+
+
+// change Event types
+export type InputChange = ChangeEvent<HTMLInputElement>
+export type FormSubmit = FormEvent<HTMLFormElement>
