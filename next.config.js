@@ -6,7 +6,7 @@ const nextConfig = {
     appDir: true
   },
   env: {
-    server_url : "http://localhost:5000/api/"
+    server_url : "http://localhost:5000/api"
   }
 }
 
