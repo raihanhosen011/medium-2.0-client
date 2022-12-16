@@ -16,7 +16,7 @@ const Form = () => {
   const [loginData, setLoginData] = useState<ILogin>(loginInitial)
 
   // hooks
-  const { mutate, data } = usePost('/login', 'login')
+  const { mutate, data, isLoading, isError, error } : { mutate: any, data: any, isLoading: boolean, isError: boolean, error: any } = usePost('/login', 'login')
 
   // handle input value 
   const handleChange = (e: InputChange) => {
@@ -30,8 +30,6 @@ const Form = () => {
     mutate(loginData)
   }
 
-  console.log(data)
-
   return (
     <div className='__login' >
       <form onSubmit={handleSubmit} >
@@ -42,6 +40,8 @@ const Form = () => {
         <Button full > Sign in </Button>
 
         <p className='text-sm text-center mt-4' > Don't have account? <Link href='/register' className='text-primary ' > Sign up </Link> </p>
+
+        {isError && error.response.data.msg}
 
       </form>
     </div>
