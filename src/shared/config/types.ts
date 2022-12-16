@@ -1,3 +1,4 @@
+import { AxiosError } from "axios";
 import { ChangeEvent, FormEvent } from "react";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 //
@@ -39,6 +40,7 @@ export interface QueryTypes {
     data ?: any
     isLoading ?: boolean
     isError ?: boolean
+    isSuccess ?: boolean
     error ?: any 
 }
 
@@ -56,19 +58,26 @@ export interface IUser extends ILogin {
 
 // redux types
 export type IAlert = {
-   status : string,
-   message : string
+  status : string,
+  message : string
 }
  
 export type IAuth = {
 
 }
  
- export type IGlobal = {
-    auth : IAuth,  
-    alert : IAlert
- }
- 
- export type IReducer = {
-    global : IGlobal
- }
+export type IRedux = {
+  data ?: any,
+  error ?: any,
+  isError ?: boolean,
+  action ?: any
+}
+
+export type IGlobal = {
+  auth : IAuth,  
+  alert : IAlert
+}
+
+export type IReducer = {
+  global : IGlobal
+}

@@ -8,7 +8,10 @@ const initialState = {
 const authReducer = (state: any = initialState, action: any): any => {
   switch (action.type){
     case GLOBAL_TYPES.AUTH:
-      return action.payload
+      return { ...state, auth : action.payload }
+
+    case GLOBAL_TYPES.ALERT:
+      return { ...state, alert : action.payload }
 
     default:
       return state

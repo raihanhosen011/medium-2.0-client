@@ -8,7 +8,7 @@ import { GLOBAL_TYPES } from '@redux/types'
 const GlobalActions = () => {
   // redux hook
   const dispatch = useDispatch()
-  const { alert } = useSelector((state: IReducer) => state.global)
+  const { alert, auth } = useSelector((state: IReducer) => state.global)
   
   // oparaton to show alert
   useEffect(() => {
@@ -24,6 +24,8 @@ const GlobalActions = () => {
       };
     }
   }, [alert]);
+
+  console.log(auth)
 
   return (
     <>
