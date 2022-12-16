@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 //
-import { FormSubmit, InputChange } from '@config/types'
+import { FormSubmit, InputChange, QueryTypes } from '@config/types'
 import { usePost } from '@hooks/useFetch'
 import { loginInitial } from '../config/constants'
 import { ILogin } from '../config/types'
@@ -16,7 +16,7 @@ const Form = () => {
   const [loginData, setLoginData] = useState<ILogin>(loginInitial)
 
   // hooks
-  const { mutate, data, isLoading, isError, error } : { mutate: any, data: any, isLoading: boolean, isError: boolean, error: any } = usePost('/login', 'login')
+  const { mutate } : QueryTypes = usePost('/login', 'login')
 
   // handle input value 
   const handleChange = (e: InputChange) => {
@@ -40,8 +40,6 @@ const Form = () => {
         <Button full > Sign in </Button>
 
         <p className='text-sm text-center mt-4' > Don't have account? <Link href='/register' className='text-primary ' > Sign up </Link> </p>
-
-        {isError && error.response.data.msg}
 
       </form>
     </div>
