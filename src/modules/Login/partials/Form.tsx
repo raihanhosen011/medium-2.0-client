@@ -1,7 +1,8 @@
 "use client"
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useDispatch } from 'react-redux'
 //
 import { FormSubmit, InputChange, QueryTypes } from '@config/types'
 import { usePost } from '@hooks/useFetch'
@@ -9,14 +10,16 @@ import { loginInitial } from '../config/constants'
 import { ILogin } from '../config/types'
 //
 import Button from '@components/Button'
+import { setRedux } from '@redux/action/global'
 
 
 const Form = () => {
   // state
   const [loginData, setLoginData] = useState<ILogin>(loginInitial)
+  const dispatch = useDispatch<any>()
 
   // hooks
-  const { mutate } : QueryTypes = usePost('/login', 'login')
+  const { mutate, data, isError, error, isSuccess } : QueryTypes = usePost('/login', 'login')
 
   // handle input value 
   const handleChange = (e: InputChange) => {
@@ -29,6 +32,10 @@ const Form = () => {
     e.preventDefault()
     mutate(loginData)
   }
+
+  useEffect(() => {
+    dispatch(setRedux(isError, error, data, isSuccess, "AUTH"))
+  }, [data, isError, error, isSuccess])
 
   return (
     <div className='__login' >
