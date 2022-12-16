@@ -24,3 +24,10 @@ export interface ButtonProps {
 // change Event types
 export type InputChange = ChangeEvent<HTMLInputElement>
 export type FormSubmit = FormEvent<HTMLFormElement>
+
+
+// react-query types
+export type Response = {
+    ts: Date;
+    items: string[];
+};
