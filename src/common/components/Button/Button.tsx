@@ -67,18 +67,15 @@ const Button: FC<ButtonProps> = ({
     return (
       <Link
         href={`${href}`}
+        className={cx(
+          CLASSES,
+          secondary && SECONDARY_CLASS
+        )}
+        onClick={onClick}
+        target={targetBlank ? "_blank" : undefined}
         rel="noopener noreferrer"
       >
-        <a
-            className={cx(
-              CLASSES,
-              secondary && SECONDARY_CLASS
-            )}
-            onClick={onClick}
-            target={targetBlank ? "_blank" : undefined}
-        >
-          {children || `This is Link`}
-        </a>
+        {children || `This is Link`}
       </Link>
     );
   }
