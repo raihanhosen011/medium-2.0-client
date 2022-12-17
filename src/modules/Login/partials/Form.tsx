@@ -19,7 +19,7 @@ const Form = () => {
   const dispatch = useDispatch<any>()
 
   // hooks
-  const { mutate, data, isError, error, isSuccess } : QueryTypes = usePost('/login', 'login')
+  const { mutate, data, isError, error, isSuccess, isLoading } : QueryTypes = usePost('/login', 'login')
 
   // handle input value 
   const handleChange = (e: InputChange) => {
@@ -44,7 +44,7 @@ const Form = () => {
         <input name="account" placeholder='Enter your email' onChange={handleChange} type='email' required />
         <input name='password' placeholder='Enter password' onChange={handleChange} type='text' required />
 
-        <Button full > Sign in </Button>
+        <Button loading={isLoading} full > Sign in </Button>
 
         <p className='text-sm text-center mt-4' > Don't have account? <Link href='/register' className='text-primary ' > Sign up </Link> </p>
 
