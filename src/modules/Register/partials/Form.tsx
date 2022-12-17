@@ -27,6 +27,8 @@ const Form = () => {
 
   return (
     <div className='__login' >
+      <h1 className='font-playfair font-medium text-[28px]' > Join poors Medium. </h1>
+
       <form onSubmit={handleSubmit} >
 
         <input onChange={handleChange} name="name" placeholder='Enter your name' type='text' required />
