@@ -7,7 +7,7 @@ export const setRedux = ( isError ?: boolean, error ?: any, data ?: any, isSucce
   try {
 
     // @ts-ignore
-    if(data) dispatch({ type: GLOBAL_TYPES[action], payload: data?.data })
+    if(data && action) dispatch({ type: GLOBAL_TYPES[action], payload: data?.data })
     if(isError) dispatch({ type: GLOBAL_TYPES.ALERT, payload: { status: "error", message: error.response?.data.msg } })
     if(isSuccess) dispatch({ type: GLOBAL_TYPES.ALERT, payload: { status: "success", message: data?.data.msg } })
     
