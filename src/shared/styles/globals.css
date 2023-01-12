@@ -14,11 +14,20 @@
    .container{
       @apply relative w-full mr-auto ml-auto pr-[12px] pl-[12px] 2xl:max-w-[1536px] 2xl:pl-[13rem] 2xl:pr-[13rem] xl:max-w-[1280px] xl:pl-[5rem] xl:pr-[5rem] lg:max-w-[1024px] lg:pl-[45px] lg:pr-[45px] md:max-w-[768px] md:pl-[15px] md:pr-[15px]
    }  
-   .__login {
+   .__login, #__registration {
       @apply w-[340px]
    }
-   .__login input[type="text"], .__login input[type="email"]{
+   .__login input[type="text"], .__login input[type="email"], #__registration input[type="text"], #__registration input[type="email"]{
       @apply block border border-[#d2d2d2] rounded-full p-[12px_18px] w-full outline-none mb-4
+   }
+   .__otp{
+      @apply  py-4 mb-4
+   }
+   .__otp > div{
+      @apply w-full flex items-center justify-between mb-3
+   }
+   .__otp input{
+      @apply !rounded-[10px] !w-[50px] !h-[50px] !p-0 !text-[27px] !font-[600] !text-[#3f3f3f] !mb-0 select-none
    }
 }
 
