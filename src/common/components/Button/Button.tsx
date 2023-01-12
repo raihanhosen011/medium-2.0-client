@@ -25,7 +25,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
   const CLASSES = cx(
      "relative text-white h-auto bg-primary inline-flex items-center text-[14px] md:text-[16px] justify-center rounded-full transition-all font-medium hover:bg-primary-dark duration-300 ",
-     disabled && '!bg-disable hover:!bg-disable cursor-not-allowed',
+     disabled && '!bg-disable opacity-40 hover:!bg-disable cursor-not-allowed',
      loading && 'cursor-not-allowed !bg-disable hover:!bg-disable',
      full && "!w-full",
      fontSize,
